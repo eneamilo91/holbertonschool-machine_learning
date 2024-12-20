@@ -2,6 +2,8 @@
 """
 Rearrange the MultiIndex levels such that the timestamp is first
 """
+import pandas as pd
+index = __import__('10-index').index
 
 
 def hierarchy(df1, df2):
