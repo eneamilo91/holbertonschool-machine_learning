@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """New code updates Pandas DataFrame"""
+import pandas as pd
 
 
 def rename(df):
