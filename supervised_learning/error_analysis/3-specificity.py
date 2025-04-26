@@ -23,14 +23,9 @@ def specificity(confusion):
     # formula of specificity : true negative / (true negative + false positive)
     for i in range(classes):
         true_pos = confusion[i, i]
-        # Summing the column i 
         false_pos = np.sum(confusion[:, i]) - true_pos
-        # Summing the row i 
         false_neg = np.sum(confusion[i, :]) - true_pos
-
-        # TP = Total - (TP + FP + FN)
         true_neg = np.sum(confusion) - (true_pos + false_pos + false_neg)
-
         specificity_matrix[i] = true_neg / (true_neg + false_pos)
 
     return specificity_matrix
