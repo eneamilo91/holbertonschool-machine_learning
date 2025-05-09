@@ -2,7 +2,7 @@
 '''
 Moudulus that calculates the cost of a NN with l2 regularization
 '''
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 
 
 def l2_reg_cost(cost):
