@@ -24,7 +24,7 @@ def convolve_channels(images, kernel, padding='same', stride=(1, 1)):
     elif padding == 'valid':
         ph, pw = (0, 0)
 
-    if type(padding) == tuple and len(padding) == 2:
+    if isinstance(padding, tuple) and len(padding) == 2:
         ph, pw = padding
 
     padded_img = np.pad(images, ((0, 0), (ph, ph), (pw, pw),
